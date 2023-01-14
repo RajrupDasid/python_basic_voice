@@ -13,10 +13,7 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 #comment after first run
 
-#nltk.download('popular',quiet=True)
-#nltk.download('nps_chat',quiet=True)
-#nltk.download('punkt')
-#nltk.download('wordnet')
+
 
 
 #question type classes
@@ -115,7 +112,7 @@ while(flag==True):
                 res=(response(user_response))
                 prYellow(res)
                 sent_tokens.remove(user_response)
-                tts = gTTS(res,lang="en",tld="co.in")
+                tts = gTTS(res,lang="en",tld="us")
                 tts.save(file)
                 os.system("mpg123 " + file)
     else:
